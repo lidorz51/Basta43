@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/settingC"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="settings"
+                android:src="@drawable/settting" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="100dp">
+
+            <Button
+                android:id="@+id/Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:onClick="logIn"
+                android:text="Sign in"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/Signin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/Signup"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:onClick="signUp"
+                android:text="Sign up"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/exhibition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:text="@string/initiative"
+            android:onClick="initiator"
+            app:backgroundTint="@android:color/darker_gray"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/lectures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:text="@string/Lectures"
+            android:onClick="lectures"
+            app:backgroundTint="@android:color/darker_gray"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/performances"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:text="@string/Performance"
+            app:backgroundTint="@android:color/darker_gray"
+            android:onClick="performances"
+            tools:ignore="ExtraText">
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="113dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bthAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:background="@android:color/transparent"
+            android:onClick="viewAll"
+            android:text="@string/all"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/bthDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:background="@android:color/transparent"
+            android:text="@string/day"
+            android:onClick="viewDay"
+            android:textColor="@color/black"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/bthWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:onClick="viewWeed"
+            android:background="@android:color/transparent"
+            android:text="@string/week"
+            android:textColor="@color/black"
+            tools:ignore="ButtonStyle" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_lecture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@id/image"
+            android:layout_width="114dp"
+            android:layout_height="118dp"
+            android:padding="10dp"
+            android:onClick="lecture"
+            android:src="@drawable/lecture"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@id/image1"
+            android:layout_width="114dp"
+            android:layout_height="118dp"
+            android:padding="10dp"
+            android:src="@drawable/lecture1"
+            android:onClick="lecture1"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@id/image2"
+            android:layout_width="114dp"
+            android:layout_height="118dp"
+            android:padding="10dp"
+            android:src="@drawable/lecture2"
+            android:onClick="lecture2"
+            android:visibility="visible"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/initiate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:onClick="goToInitiate"
+            android:text="Contact Us"
+            android:textColor="@color/white"
+            app:backgroundTint="@android:color/darker_gray"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+
+</LinearLayout>

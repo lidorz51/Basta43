@@ -1,0 +1,336 @@
+@startuml
+
+title __MYAPPLICATION's Class Diagram__\n
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.AddImage {
+        ~ firebaseDatabase : FirebaseDatabase
+        ~ mDatabaseRef : DatabaseReference
+        ~ mail : String
+        ~ myRef : DatabaseReference
+        ~ name : String
+        {static} - PICK_IMAGE_REQUEST : int
+        - mButtonChooseImage : TextView
+        - mButtonUpload : Button
+        - mImageUri : Uri
+        - mImageView : ImageView
+        - mProgressBar : ProgressBar
+        - mStorageRef : StorageReference
+        - mTextViewShowUploads : TextView
+        - mUploadTask : StorageTask
+        # onActivityResult()
+        # onCreate()
+        - getFileExtension()
+        - openFileChooser()
+        - openImagesActivity()
+        - uploadFile()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.Community {
+        ~ all : Button
+        ~ day : Button
+        ~ id : String
+        ~ image : ImageView
+        ~ image1 : ImageView
+        ~ image2 : ImageView
+        ~ initiate : Button
+        ~ initiator : Button
+        ~ lectures : Button
+        ~ lin : LinearLayout
+        ~ login : TextView
+        ~ login_button : Button
+        ~ logout : Button
+        ~ mail : String
+        ~ performances : Button
+        ~ setting : ImageView
+        ~ signup : Button
+        ~ week : Button
+        + goToInitiate()
+        + initiator()
+        + lecture()
+        + lecture1()
+        + lecture2()
+        + lectures()
+        + logIn()
+        + logOut1()
+        + performances()
+        + settings()
+        + signUp()
+        + viewAll()
+        + viewDay()
+        + viewWeed()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.ForgotPassword {
+        ~ back : ImageButton
+        ~ firebaseAuth : FirebaseAuth
+        ~ firebaseDatabase : FirebaseDatabase
+        ~ mail : String
+        ~ message : String
+        ~ myRef : DatabaseReference
+        ~ reset : Button
+        ~ resetEmail : EditText
+        {static} - TAG : String
+        + back()
+        + forgotPassword()
+        + openDialog()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.FormToInitiate {
+        ~ description : TextView
+        ~ et_email : TextView
+        ~ et_phone : TextView
+        ~ firebaseAuth : FirebaseAuth
+        ~ firebaseDatabase : FirebaseDatabase
+        ~ mail : String
+        ~ myRef : DatabaseReference
+        ~ remember : String
+        ~ submit : Button
+        + submit()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.ImageAdapter {
+        - mContext : Context
+        - mUploads : List<Upload>
+        + ImageAdapter()
+        + getItemCount()
+        + onBindViewHolder()
+        + onCreateViewHolder()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.ImageAdapter.ImageViewHolder {
+        + imageView : ImageView
+        + textViewName : TextView
+        + ImageViewHolder()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.ImagesActivity {
+        - mDatabaseRef : DatabaseReference
+        - mProgressCircle : ProgressBar
+        - mRecyclerView : RecyclerView
+        - mUploads : List<Upload>
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.Login {
+        ~ back : ImageButton
+        ~ checkBox : CheckBox
+        ~ email : EditText
+        ~ forgot_password : Button
+        ~ id : String
+        ~ login : Button
+        ~ mail : String
+        ~ pass : EditText
+        ~ password : String
+        ~ pd : ProgressDialog
+        ~ remember : String
+        ~ signup1 : Button
+        ~ wrong_user : TextView
+        + back()
+        + forgotPassword()
+        + logIn()
+        + signup1()
+        + stayLogin()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.MainActivity {
+        ~ community : ImageButton
+        ~ id : String
+        ~ login : TextView
+        ~ mail : String
+        ~ photos : ImageButton
+        ~ signin : Button
+        ~ signup : Button
+        ~ sigout : Button
+        + logIn()
+        + logOut()
+        + settings()
+        + signUp()
+        + viewCommunity()
+        + viewImage()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.MyAdapter {
+        - context : Context
+        - mList : ArrayList<Upload>
+        + MyAdapter()
+        + getItemCount()
+        + onBindViewHolder()
+        + onCreateViewHolder()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.MyAdapter.MyViewHolder {
+        ~ imageView : ImageView
+        + MyViewHolder()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.Register {
+        ~ back : ImageButton
+        ~ editTextEmail : EditText
+        ~ editTextName : EditText
+        ~ editTextPassword : EditText
+        ~ firebaseAuth : FirebaseAuth
+        ~ firebaseDatabase : FirebaseDatabase
+        ~ myref : DatabaseReference
+        ~ p : ProgressDialog
+        ~ submit : Button
+        + back()
+        + isValidate()
+        + signUp()
+        + signin1()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.ResetPassword {
+        ~ confirm_password : EditText
+        ~ firebaseAuth : FirebaseAuth
+        ~ firebaseDatabase : FirebaseDatabase
+        ~ mail : String
+        ~ myRef : DatabaseReference
+        ~ new_password : EditText
+        ~ reset : Button
+        {static} - TAG : String
+        + resetPassword()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.Security {
+        {static} - ALGORITHM : String
+        {static} - KEY : String
+        {static} + decrypt()
+        {static} + encrypt()
+        {static} - generateKey()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.Setting {
+        ~ databaseReference : DatabaseReference
+        ~ delete : Button
+        ~ firebaseAuth : FirebaseAuth
+        ~ firebaseDatabase : FirebaseDatabase
+        ~ firebaseUser : FirebaseUser
+        ~ mail : String
+        + back()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.SiginAndSignout {
+        ~ signin_image : ImageButton
+        ~ signup_image : ImageButton
+        + signIn1()
+        + signUp1()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.Upload {
+        - mImageUrl : String
+        - mName : String
+        + Upload()
+        + Upload()
+        + getImageUrl()
+        + getName()
+        + setImageUrl()
+        + setName()
+    }
+  }
+  
+
+  namespace com.example.myapplication {
+    class com.example.myapplication.User {
+        + email : String
+        + name : String
+        + password : String
+        + User()
+        + User()
+        + getEmail()
+        + getName()
+        + getPassword()
+        + setEmail()
+        + setName()
+        + setPassword()
+    }
+  }
+  
+
+  com.example.myapplication.AddImage -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.myapplication.Community -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.myapplication.ForgotPassword -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.myapplication.FormToInitiate -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.myapplication.ImageAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.example.myapplication.ImageAdapter +-down- com.example.myapplication.ImageAdapter.ImageViewHolder
+  com.example.myapplication.ImageAdapter.ImageViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.example.myapplication.ImagesActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.myapplication.ImagesActivity o-- com.example.myapplication.ImageAdapter : mAdapter
+  com.example.myapplication.Login -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.myapplication.Login o-- com.example.myapplication.User : user
+  com.example.myapplication.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.myapplication.MyAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.example.myapplication.MyAdapter +-down- com.example.myapplication.MyAdapter.MyViewHolder
+  com.example.myapplication.MyAdapter.MyViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.example.myapplication.Register -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.myapplication.Register o-- com.example.myapplication.Security : s
+  com.example.myapplication.ResetPassword -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.myapplication.Setting -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.myapplication.SiginAndSignout -up-|> androidx.appcompat.app.AppCompatActivity
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
